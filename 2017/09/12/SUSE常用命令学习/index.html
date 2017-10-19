@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java,Thread,线程," />
+  <meta name="keywords" content="Linux,SUSE," />
 
 
 
@@ -101,18 +101,18 @@
 
 
 
-<meta name="description" content="Java Thread 笔记">
-<meta name="keywords" content="Java,Thread,线程">
+<meta name="description" content="SUSE 常用命令学习参考地址：http://areshowl.iteye.com/blog/1686201">
+<meta name="keywords" content="Linux,SUSE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java Thread">
-<meta property="og:url" content="http://aiyunxixi.com/2017/01/02/Java Thread笔记/index.html">
+<meta property="og:title" content="SUSE 常用命令学习">
+<meta property="og:url" content="http://aiyunxixi.com/2017/09/12/SUSE常用命令学习/index.html">
 <meta property="og:site_name" content="爱云栖栖">
-<meta property="og:description" content="Java Thread 笔记">
+<meta property="og:description" content="SUSE 常用命令学习参考地址：http://areshowl.iteye.com/blog/1686201">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-04-14T08:53:30.919Z">
+<meta property="og:updated_time" content="2017-09-14T01:51:42.432Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java Thread">
-<meta name="twitter:description" content="Java Thread 笔记">
+<meta name="twitter:title" content="SUSE 常用命令学习">
+<meta name="twitter:description" content="SUSE 常用命令学习参考地址：http://areshowl.iteye.com/blog/1686201">
 
 
 
@@ -140,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://aiyunxixi.com/2017/01/02/Java Thread笔记/"/>
+  <link rel="canonical" href="http://aiyunxixi.com/2017/09/12/SUSE常用命令学习/"/>
 
 
 
 
 
-  <title> Java Thread | 爱云栖栖 </title>
+  <title> SUSE 常用命令学习 | 爱云栖栖 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -353,7 +353,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://aiyunxixi.com/2017/01/02/Java Thread笔记/">
+    <link itemprop="mainEntityOfPage" href="http://aiyunxixi.com/2017/09/12/SUSE常用命令学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="何有悠然">
@@ -374,7 +374,7 @@
             
             
               
-                Java Thread
+                SUSE 常用命令学习
               
             
           </h1>
@@ -387,8 +387,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-02T19:40:01+08:00">
-                2017-01-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T11:22:55+08:00">
+                2017-09-12
               </time>
             
 
@@ -408,8 +408,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -426,7 +426,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/01/02/Java Thread笔记/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/09/12/SUSE常用命令学习/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -435,7 +435,7 @@
 
           
           
-             <span id="/2017/01/02/Java Thread笔记/" class="leancloud_visitors" data-flag-title="Java Thread">
+             <span id="/2017/09/12/SUSE常用命令学习/" class="leancloud_visitors" data-flag-title="SUSE 常用命令学习">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -462,10 +462,47 @@
       
 
       
-        <blockquote>
-<p>Java Thread 笔记</p>
-</blockquote>
+        <h1 id="SUSE-常用命令学习"><a href="#SUSE-常用命令学习" class="headerlink" title="SUSE 常用命令学习"></a>SUSE 常用命令学习</h1><p>参考地址：<a href="http://areshowl.iteye.com/blog/1686201" target="_blank" rel="external">http://areshowl.iteye.com/blog/1686201</a></p>
 <a id="more"></a>
+<blockquote>
+<p>zypper</p>
+</blockquote>
+<pre><code>zypper                # 列出可用的全局选项和命令
+
+zypper help search    # 列出 search 命令的帮助
+
+zypper lp            # 列出需要的补丁更新
+
+zypper patch        # 安装所需的补丁
+
+zypper se sqlite    # 搜索 sqlite 软件
+
+zypper rm sqlite2    # 删除 sqlite2 软件
+
+zypper in sqlite3    # 安装 sqlite3 软件
+
+zypper in yast*        # 安装所有符合 yast* 名称的软件
+
+zypper up            # 更新所有软件包到可用的新版本
+</code></pre><blockquote>
+<p>SUSE 本地源配置 <a href="http://blog.csdn.net/hanzheng260561728/article/details/52181590" target="_blank" rel="external">http://blog.csdn.net/hanzheng260561728/article/details/52181590</a></p>
+<p>suse 关闭防火墙</p>
+</blockquote>
+<ol>
+<li>关闭 iptables服务</li>
+</ol>
+<p>用root用户权限执行 禁止iptables服务命令</p>
+<pre><code>chkconfig iptables off
+</code></pre><ol>
+<li>关闭SuSE Linux管理防火墙的服务</li>
+</ol>
+<p>检查 SuSE防火墙是否设置为启动</p>
+<pre><code>chkconfig --list | grep firewall
+</code></pre><p>关闭防火墙服务</p>
+<pre><code>chkconfig SuSEfirewall2_init off
+
+chkconfig SuSEfirewall2_setup off
+</code></pre>
       
     </div>
 
@@ -514,7 +551,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://aiyunxixi.com/2017/01/02/Java Thread笔记/" title="Java Thread">http://aiyunxixi.com/2017/01/02/Java Thread笔记/</a>
+      <a href="http://aiyunxixi.com/2017/09/12/SUSE常用命令学习/" title="SUSE 常用命令学习">http://aiyunxixi.com/2017/09/12/SUSE常用命令学习/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -539,11 +576,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
-            <a href="/tags/Thread/" rel="tag"># Thread</a>
-          
-            <a href="/tags/线程/" rel="tag"># 线程</a>
+            <a href="/tags/SUSE/" rel="tag"># SUSE</a>
           
         </div>
       
@@ -556,8 +591,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/01/Git 基本使用/" rel="next" title="Git 的基本使用">
-                <i class="fa fa-chevron-left"></i> Git 的基本使用
+              <a href="/2017/08/13/20170812linux命令学习/" rel="next" title="Linux 常用命令学习">
+                <i class="fa fa-chevron-left"></i> Linux 常用命令学习
               </a>
             
           </div>
@@ -565,10 +600,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/03/Java 的基本问题/" rel="prev" title="Java 基本问题">
-                Java 基本问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -623,8 +654,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=562862502,2807361029&fm=116&gp=0.jpg"
@@ -733,6 +773,24 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SUSE-常用命令学习"><span class="nav-number">1.</span> <span class="nav-text">SUSE 常用命令学习</span></a></li></ol></div>
+            
+			
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=120 height=75 src="//music.163.com/outchain/player?type=2&id=30903117&auto=1&height=66"></iframe>
+			
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
