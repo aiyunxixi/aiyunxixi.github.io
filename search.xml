@@ -216,17 +216,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Mabatis基本使用]]></title>
-    <url>%2F2017%2F01%2F01%2FMybatis%20%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB%2F</url>
-    <content type="text"><![CDATA[Mabatis基本使用 Mabatis 表与实体的映射关系 http://www.cnblogs.com/xdp-gacl/p/4264440.html]]></content>
-      <categories>
-        <category>Mabatis</category>
-      </categories>
-      <tags>
-        <tag>Mabatis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Git 的基本使用]]></title>
     <url>%2F2017%2F01%2F01%2FGit%20%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[git 的相关操作Git 的基本使用 一个教程网站 Git 廖雪峰 教程 取别名 局部 git config alias.st status 全局 git config –global alias.st status 初始化 git init 添加到本地缓存中 git add . 从索引写入到库 git commit -m “提交到版本库” git commit -a -m “提交，连同所有未 add 的修改文件” git commit –amend -a -m “替换最后一次的提交信息” 从git仓库中克隆下来 git clone https://github.com/liugch/SSH.git 更新本地仓库 git pull 提交到github 仓库中 git push 查看修改了什么东西 git diff git diff –cached git status 查看日志，历史记录 git show git log git log –pretty=oneline # 定制 log 的显示样式 git log -2 -p # 显示最近两次提交的详细信息 git log –stat –summary # 简要显示每次更新的统计信息（提交过那些文件，有多少行修改） 增加/查看/切换/删除 分支 git branch # 查看分支 git branch hehe # 创建分支 hehe git branch hehe 22222 # 以 22222 为起点创建 hehe 分支 git checkout hehe # 切换到分支 hehe git checkout -b tmp # 创建并切换到分支 tmp git branch -D tmp # 删除分支 tmp 合并工作到主分支(hehe -&gt; master) git checkout master # 切换到主分支 git merge HEAD hehe # 将 hehe 的最新版本合并到当前分支 git pull . hehe # 相当于 git fetch &amp;&amp; git merge]]></content>
@@ -235,6 +224,17 @@
       </categories>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mabatis基本使用]]></title>
+    <url>%2F2017%2F01%2F01%2FMybatis%20%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB%2F</url>
+    <content type="text"><![CDATA[Mabatis基本使用 Mabatis 表与实体的映射关系 http://www.cnblogs.com/xdp-gacl/p/4264440.html]]></content>
+      <categories>
+        <category>Mabatis</category>
+      </categories>
+      <tags>
+        <tag>Mabatis</tag>
       </tags>
   </entry>
   <entry>
@@ -282,17 +282,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Spring 一些基本的注解的使用]]></title>
-    <url>%2F2016%2F10%2F28%2FSpring%20%E4%B8%80%E4%BA%9B%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
-    <content type="text"><![CDATA[Spring Bean 的一些配置 id: Bean唯一标识 Class: Bean 对应的Class 类 lazy-init:值为: TRUE / false 默认为: false 定义这个Bean是否懒初始化(就是用到这个Bean的时候才初始化) singleton:值为: TRUE / false 默认为: TRUE; 定义这个Bean 是否是单例模式,如果是false的话:每获取该Bean 的时候 都不是同一个Bean实例 ,会重新创建一个; autowire:值为:byName 根据名字装配 byType 根据类型装配 constructor 根据构造器装配 默认:default no ; 定义这个Bean的时候是否自动注入其它的Bean的实例; 比如autowire=”byName”,如果该Bean对应类中有其它Bean类型的变量时:并且该变量的属性名 和 xml中定义的某个Bean的id 相同就会把这个Bean自动注入进去 scope:值为:singleton(单例)prototype(重新创建实例) 一般用在Action request,session,global session 仅用于web中; abstract:值为: TRUE / false 默认: false; 定义一个Bean是否是抽象Bean, 表示该Bean 不被实例化; 一般用于,一些 属性不会经常改变; 经常会被其它的Bean 给继承; parent:值为: 其它 Bean的id值; 表示继承对应id的Bean ; depends-on:值为: 其它 Bean的id值; 表示实例化该Bean的时候 , 先实例化和 depends-on值的Bean的实例; init-method:用来定义Bean的初始化方法，它会在Bean组装之后调用。它必须是一个无参数的方法。 destroy-method：用来定义Bean的销毁方法，它在BeanFactory关闭时调用。同样，它也必须是一个无参数的方法。它只能应用于singleton Bean。 factory-method：定义创建该Bean对象的工厂方法。它用于下面的“factory-bean”，表示这个Bean是通过工厂方法创建。此时，“class”属性失效。 factory-bean:定义创建该Bean对象的工厂类。如果使用了“factory-bean”则“class”属性失效。 如果有很多的xml 可以使用import 导入在集合其它框架整合的时候. 还有其它方式进行导入 &lt;import resource=&quot;spring-test.xml&quot;/&gt; 当使用注解的时候 需要定义如下: &lt;context:component-scan base-package=&quot;com.liugch&quot;&gt; &lt;context:exclude-filter type=&quot;annotation&quot; expression=&quot;com.liugch.entity&quot;/&gt; &lt;/context:component-scan&gt; 当要加载 其它的配置文件的时候 如:properties 文件时 &lt;context:property-placeholder location=&quot;jdbc.properties&quot;/&gt; Spring 中一些常用的注解 @Component @Repository @Service @Controller 上面都是一样的作用: 用来 让一个类让Spring容器来管理 , 相当于生成了一个Bean @Resource @Autowired @Qualifier 上面用注入: 一般用 @Resource 就行了 @Scope(“prototype”) 让该类不是使用单例;重新创建新的实例;]]></content>
-      <categories>
-        <category>Spring</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[SSH 整合笔记]]></title>
     <url>%2F2016%2F10%2F28%2FSSH%E6%95%B4%E5%90%88%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[SSH笔记 rasphone 连接网络 Spring 的使用教程 http://wiki.jikexueyuan.com/project/spring/ Hibernate.initialize(autho.getBook()) 显式 lazy对象 Struts2 几种获取参数的方法 https://my.oschina.net/u/1398304/blog/215874SSH 整合的一些思路及案例 http://blog.csdn.net/zhuanzhe117/article/details/48014545SpringMVC 的一些配置 https://segmentfault.com/a/1190000005670764#articleHeader7SpringMVC 的一些笔记 http://www.imooc.com/article/1392maven 中oracle jar包 到达下载后的jar包的位置 执行下面语句 mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0 -Dpackaging=jar -Dfile=ojdbc6.jar -DgeneratePom=true 大神的博客 http://blog.csdn.net/fengshizty?viewmode=list 无法访问服务器 1.没有部署到服务器中;2.配置中访问地址已经出错; 防止访问时路径有问题]]></content>
@@ -304,6 +293,17 @@
         <tag>SSH</tag>
         <tag>Spring</tag>
         <tag>Struts2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Spring 一些基本的注解的使用]]></title>
+    <url>%2F2016%2F10%2F28%2FSpring%20%E4%B8%80%E4%BA%9B%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[Spring Bean 的一些配置 id: Bean唯一标识 Class: Bean 对应的Class 类 lazy-init:值为: TRUE / false 默认为: false 定义这个Bean是否懒初始化(就是用到这个Bean的时候才初始化) singleton:值为: TRUE / false 默认为: TRUE; 定义这个Bean 是否是单例模式,如果是false的话:每获取该Bean 的时候 都不是同一个Bean实例 ,会重新创建一个; autowire:值为:byName 根据名字装配 byType 根据类型装配 constructor 根据构造器装配 默认:default no ; 定义这个Bean的时候是否自动注入其它的Bean的实例; 比如autowire=”byName”,如果该Bean对应类中有其它Bean类型的变量时:并且该变量的属性名 和 xml中定义的某个Bean的id 相同就会把这个Bean自动注入进去 scope:值为:singleton(单例)prototype(重新创建实例) 一般用在Action request,session,global session 仅用于web中; abstract:值为: TRUE / false 默认: false; 定义一个Bean是否是抽象Bean, 表示该Bean 不被实例化; 一般用于,一些 属性不会经常改变; 经常会被其它的Bean 给继承; parent:值为: 其它 Bean的id值; 表示继承对应id的Bean ; depends-on:值为: 其它 Bean的id值; 表示实例化该Bean的时候 , 先实例化和 depends-on值的Bean的实例; init-method:用来定义Bean的初始化方法，它会在Bean组装之后调用。它必须是一个无参数的方法。 destroy-method：用来定义Bean的销毁方法，它在BeanFactory关闭时调用。同样，它也必须是一个无参数的方法。它只能应用于singleton Bean。 factory-method：定义创建该Bean对象的工厂方法。它用于下面的“factory-bean”，表示这个Bean是通过工厂方法创建。此时，“class”属性失效。 factory-bean:定义创建该Bean对象的工厂类。如果使用了“factory-bean”则“class”属性失效。 如果有很多的xml 可以使用import 导入在集合其它框架整合的时候. 还有其它方式进行导入 &lt;import resource=&quot;spring-test.xml&quot;/&gt; 当使用注解的时候 需要定义如下: &lt;context:component-scan base-package=&quot;com.liugch&quot;&gt; &lt;context:exclude-filter type=&quot;annotation&quot; expression=&quot;com.liugch.entity&quot;/&gt; &lt;/context:component-scan&gt; 当要加载 其它的配置文件的时候 如:properties 文件时 &lt;context:property-placeholder location=&quot;jdbc.properties&quot;/&gt; Spring 中一些常用的注解 @Component @Repository @Service @Controller 上面都是一样的作用: 用来 让一个类让Spring容器来管理 , 相当于生成了一个Bean @Resource @Autowired @Qualifier 上面用注入: 一般用 @Resource 就行了 @Scope(“prototype”) 让该类不是使用单例;重新创建新的实例;]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
